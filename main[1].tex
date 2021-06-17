@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{\textbf{Lista nominal en Guanajuato\\Migración en México}}
+
+\author{Valdivia Esquivel Irazú Betsabe\\Herramientas informaticas y gestión de la información }
+\date{Junio 2021}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+\newpage
+\section{Lista nominal en Guanajuato}
+En este trabajo se presentará un análisis sobre los datos obtenidos por el IEEG acerca de la lista nominal en el estado de Guanajuato, en la primera sección de este trabajo se presentarán los datos correspondientes al tiempo del mes de septiembre del 2019 hasta diciembre del 2020.
+
+\begin{table}[htb!]\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Mes & Total de lista nominal \\ \hline
+Sep-19 & 4437452 \\ \hline
+Oct-19 & 4450039 \\ \hline
+Nov-19 & 4441639\\ \hline
+Dic-19 & 4447042 \\ \hline
+Ene-20 & 4358635\\ \hline
+Feb-20 & 4403408\\ \hline
+Mar-20 & 4439204 \\ \hline
+Abr-20 & 4438406 \\ \hline
+May-20 & 4500970 \\ \hline
+Jun-20 & 4500932 \\ \hline
+Jul-20 & 4500671\\ \hline
+Agt-20 & 4505474 \\ \hline
+Sep-20 & 4512491\\ \hline
+Oct-20 & 4533938\\ \hline
+Nov-20 & 4555122 \\ \hline
+Dic-20 & 4568590 \\ \hline
+\end{tabular}
+\caption{\textbf{Lista nominal por fecha registrada}. Se sumaron los datos de cada municipio de Guanajuato}
+\label{table:V1}
+\end{table}
+ En la tabla 1 se muestra una recopilación de los datos que se analizaron, se realizo una suma para la lista nominal de cada municipio del estado de Guanajuato durante el tiempo ya mencionado, con esto se obtuvo una gráfica (Figura 1), donde se observa que la lista nominal tiene una pendiente positiva por lo cual tiene una tendencia a crecer conforme avance el tiempo.\\
+ 
+ \begin{figure}[!] 
+  \includegraphics[width=73mm,scale=1, angle=360]{Lista-nominal-mes.png}
+  \centering
+  \caption{\textb{Gráfica de lista nominal por mes con regresión lineal.}}
+  \label{fig:Lista-mes.jpg.}
+\end{figure}
+
+Se agruparon los datos de los 46 municipios del estado de Guanajuato y se tomaron solo en cuenta los datos de la lista nominal, para cada municipio se encontró una taza de cambio positiva y se podía observar en las gráficas. Es importante mencionar que el municipio 0 representa las casillas utilizadas para los votos que se reciben del extranjero.\\
+
+La lista nominal representa el número de votos que se obtuvo en el proceso de elecciones, esto nos permite poder realizar un análisis con los datos, lo cual nos ayudará a predecir cuantos votos se esperan en cierto tiempo, para este documento se calculo cuantos votos se tendrían en feb del 2021, los resultados se muestran en la tabla 2.
+\begin{table}[htb!]\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+Municipio & Predicción Feb-20 & Municipio & Predicción Feb-20 \\ \hline
+0 & 30528.34 & 24 & 10936.628 \\ \hline
+1 & 68635.96 & 25 & 57142.22 \\ \hline
+2 & 96089.98 & 26 & 47006.134\\ \hline
+3 & 133214.42 & 27 & 21759.42\\ \hline
+4 & 50914.65 & 28 & 84468.174\\ \hline
+5 & 70296.64 & 29 & 28650.47\\ \hline
+6 & 4271.5084 & 30 & 84556.4\\ \hline
+7 & 387884.42 & 31 & 95697.4\\ \hline
+8 & 32366.65 & 32 & 62190.96\\ \hline
+9 & 61811.92 & 33 & 92591.48\\ \hline
+10 & 9439.428 & 34 & 4450.6354\\ \hline
+11 & 75992.04 & 35 & 62906.72\\ \hline
+12 & 23840.216 & 36 & 6638.272\\ \hline
+13 & 18798.216 & 37 & 140974.5\\ \hline
+14 & 116767.86 & 38 & 10453.66\\ \hline
+15 & 143538.44 & 39 & 37486.226\\ \hline
+16 & 16973.376 & 40 & 13693.368\\ \hline
+17 & 435512.6 & 41 & 50410.78\\ \hline
+18 & 29695.968 & 42 & 117469.16\\ \hline
+19 & 41733.908 & 43 & 15662.404\\ \hline
+20 & 1173568.44 & 44 & 48020.64\\ \hline
+21 & 44415.57 & 45 & 8579.4416\\ \hline
+22 & 18530.082 & 46 & 64069.42\\ \hline
+23 & 127741.22 & Suma total & 4378376.37\\ \hline
+\end{tabular}
+\caption{\textbf{Lista nominal por fecha registrada}. Se sumaron los datos de cada municipio de Guanajuato}
+\label{table:V1}
+\end{table}
+
+Con el total de votos que se predijo para el febrero de 2020, que son 4378377 si se redondea, ya que todos tienen derecho a votar, se puede calcular cuantas casillas se deben instalar para esa fecha. Para realizar este calculo se debe tomar en cuenta que cada casilla cuenta con 750 boletas, al realizar los cálculos se obtuvo que se deberían instalar 5838 casillas, tomando en cuenta solo la tasa de cambio a nivel municipio.
+Conociendo la tasa de cambio de cada municipio se aplico a cada sección (cada municipio se divide en secciones), de esta forma se busca tener una precisión mayor, y se realizaron los cálculos ya mencionados anteriormente. Para la predicción de casillas a nivel sección aplicando la tasa de cambio de cada estado se obtuvo que se deben instalar 7611 casillas. La diferencia entre las casillas que se obtienen aplicando la tasa de cambio a los municipios es menor a la que se obtiene aplicando la tasa de cambio por sección. En este reporte se tomarán en cuenta el numero de casillas que se obtuvieron a nivel sección.\\
+
+El análisis de datos mostrado anteriormente se realizo con el programa de Excel, a continuación se muestra un análisis con el lenguaje de Python, con esto se genero una grafica en donde se apreciara la cantidad de lista nominal por cada fecha registrada, para identificar las fechas se les asigno un número del 1 al 18 (Figura 2). Con este nuevo análisis se calcularon las predicciones para el mes de febrero del 2019 por sección y se realizo el mismo calculo antes ya explicado, para esto se obtuvieron un total de 7513 casillas.
+\begin{figure}[!] 
+  \includegraphics[width=73mm,scale=1, angle=360]{Lista-nominal-muni.png}
+  \centering
+  \caption{\textb{Gráfica de lista nominal por mes.}}
+  \label{fig:Lista-mes.jpg.}
+\end{figure}
+
+\section{Migración en México}
+En siguiente sección se presentarán los estados en México que presentan mayor migración y que nacionalidad es más común cuando se trata de extranjeros. Para comenzar es importante recordar el significado de migrante e inmigrante, según la Real Academia Española (RAE), inmigrante es la persona que se instala en un país extranjero para radicarse el, y migrante es la persona que se desplaza a un lugar diferente al de origen.\\
+
+Los datos que se analizan a continuación se obtuvieron del INEGI de los años de 2000, 2010, 2020, se analizaron los datos de dos informes distintos, uno de migración e inmigración a nivel federal y otro de inmigración a nivel federal. Es importante conocer los datos de este fenómeno que en la actualidad a crecido muy rápido, en los últimos años se observado un crecimiento notorio en la migración de los mexicanos, esto se da a diferentes causas. Este fenómeno afecta de manera directa a la economía de México y es por eso por lo que es importante analizar los datos. 
+A continuación, se presenta en la Figura 3 la diferencia de migración e inmigración a nivel federal.
+\begin{figure}[!] 
+  \includegraphics[width=110mm,scale=1, angle=360]{migracion-emi.png}
+  \centering
+  \caption{\textb{Migración e inmigración en México.} }
+  \label{fig:Lista-mes.jpg.}
+\end{figure}
+
+En el Figura 4 se pueden observar los estados que tienen un mayor porcentaje de migrantes, para calcular el porcentaje de cada estado se tomo en cuenta que el total de emigrantes entre los años 2000, 2010 y 2020 fue de 58,579,898 migrantes, Ciudad de México representa el 24.96\%, Veracruz el 8.45\%, Puebla el 5.45\%, México el 5.02\%, es importante mencionar que para cada estado a lo largo del tiempo ya antes mencionado se presento un crecimiento lineal.
+\begin{figure}[!] 
+  \includegraphics[width=59mm,scale=1, angle=360]{emi-estados.png}
+  \centering
+  \caption{\textb{Estados de México con mayor número de casos de igración registrados.} }
+  \label{fig:Lista-mes.jpg.}
+\end{figure}
+Se realizo un mapa de México en donde se representan los estados que tienen la misma cantidad de casos de migración (Figura 5), con esto se buscaba mostrar un semáforo de migración, pero se tuvo problemas con la paleta de colores al momento de compilar el código lo que no lo permitió.\\
+
+\begin{figure}[!] 
+  \includegraphics[width=110mm,scale=1, angle=360]{mapa.png}
+  \centering
+  \caption{\textb{Mapa de México con casos de migración por colores.} }
+  \label{fig:Lista-mes.jpg.}
+\end{figure}
+Analizando los datos obtenidos mediante Python se pudo realizar una grafica del total de casos de migrantes por año, lo cual evidencia que la migración en México va en aumento, ya que, cada años el número de casos crece de manera proporcional.(Figura 6)\\
+\begin{figure}[!] 
+  \includegraphics[width=110mm,scale=1, angle=360]{migra-años.png}
+  \centering
+  \caption{\textb{Casos totales de migración por año en México.} }
+  \label{fig:Lista-mes.jpg.}
+\end{figure}
+
+Evidentemente en cada estado la migración e inmigración van en aumento y cada vez en más normal vivir entre una diversidad de culturas, en un futuro se podrá saber si esto tiene efectos positivos o negativos en la cultura de la sociedad nativa o en la economía.
+\section{Referencias}
+[1] INE(2020).\textit{Estadística de Padrón Electoral y Lista Nominal de Electores.}México: Instituto Nacional Electoral.\newline
+[2]INEGI. (Varios). \textit{Población total inmigrante, emigrante y saldo neto migratorio por entidad federativa.} México: Instituto Nacional de Estadística y Geografía.
+
+\end{document}
